@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1 - Sunny Landscape</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Project 1: Sunny Landscape</h1>
+        <p><a href="index.html">Back to About Me</a></p>
+        <hr>
+    </header>
+
+    <section>
+        <h2>Description</h2>
+        <p>
+            Created a vibrant landscape using Python Turtle, featuring a sun, clouds, and a central tree.
+            Explored loops, conditionals, shapes, and color fills.
+        </p>
+    </section>
+
+    <section>
+        <h2>Screenshot</h2>
+        <div class="scene-container">
+            <img src="project1photo.png" alt="Project 1 Screenshot" class="scene-image">
+        </div>
+    </section>
+
+    <section>
+        <h2>Code Snippet</h2>
+        <div class="code-container">
+<pre><code class="comment">
+
+from turtle import *
+
+speed(0)
+
+
+# green grass as a cool lil background
+bgcolor("ForestGreen")
+
+# blue sky above
+penup()
+goto(-500, -100)
+pendown()
+color("SkyBlue")
+begin_fill()
+
+# cool lil variable
+turn = 90
+
+# loop
+for i in range(2):
+    forward(1000)
+    left(turn)
+    forward(510)
+    left(turn)
+
+end_fill()
+
+# yellow sun
+penup()
+goto(-320, 225)
+pendown()
+color("Yellow")
+begin_fill()
+circle(40)
+end_fill()
+
+# clouds using conditionals for color
+x = 200
+penup()
+
+for i in range(8):
+
+    if x > 290:
+        color("lightgray")   # darker cloud
+    else:
+        color("white")       # normal cloud
+
+    goto(x, 200)
+    pendown()
+    begin_fill()
+    circle(30)
+    end_fill()
+    penup()
+
+    x += 30
+
+    goto(x, 100)
+    pendown()
+    begin_fill()
+    circle(30)
+    end_fill()
+    penup()
+
+z = -100
+color("white")
+for i in range(8):
+
+    goto(z, 300)
+    pendown()
+    begin_fill()
+    circle(30)
+    end_fill()
+    penup()
+
+    z += 35
+
+# tree in the center
+penup()
+goto(-15, -100)
+pendown()
+color("Brown")
+begin_fill()
+
+for i in range(2):
+    forward(30)
+    left(90)
+    forward(70)
+    left(90)
+
+end_fill()
+
+# tree leaves
+penup()
+goto(-60, -30)
+pendown()
+color("darkgreen")
+begin_fill()
+
+for i in range(3):
+    forward(120)
+    left(120)
+
+end_fill()
+
+done()
+
+done()</code></pre>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Liam Stewart</p>
+    </footer>
+</body>
+</html>
