@@ -123,3 +123,16 @@ footer {
     margin-top: 40px;
     font-size: 0.9rem;
 }
+
+.scene-image {
+    max-width: 90%;       /* prevents image from overflowing horizontally */
+    max-height: 400px;    /* limits vertical height */
+    width: auto;          /* keeps aspect ratio */
+    height: auto;         /* keeps aspect ratio */
+    display: block;       /* allows centering with margin auto */
+    margin: 20px auto;    /* centers the image horizontally and adds spacing */
+    border-radius: 8px;
+    border: 3px solid #fff;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
